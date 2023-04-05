@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ΠΛΗ23 - 2η Γραπτή Εργασία ">
+  <meta name="author" content="Thomas Gerodimos - std137585">
+  <title>FuelOil Price Management System</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="CSS/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="CSS/MyStyles.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- This is the main container -->
+    <div class="container">
+      <!-- This is the header section which repreats in every page -->
+      <header>
+        <div class="text-center">
+          <div class="row">
+  
+            <div class="col-3 logo">
+              <a href="Index.html">
+                <img src="Images/fuel-logo.webp" width="250px"/>
+              </a>
+            </div>
+  
+            <div class="col center-vertical">
+              <h2 class="header-title">Προσφορές πώλησης Υγρών Καυσίμων</h2>
+            </div>
+  
+            <div class="col-3 account-links">
+              <a class="btn btn-primary account" href="Login.html">Σύνδεση</a>
+              <a class="btn btn-primary account" href="Register.html">Εγγραφή</a>
+            </div>
+  
+          </div>
+        </div>
+  
+        <!-- This is the menu  which repreats in every page -->
+  
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 2em;">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="Index.html">Αρχική</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="Search.html">Αναζήτηση</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Promotion.html">Καταχώρηση</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Announcements.html">Ανακοινώσεις</a>
+              </li>
+            </ul>
+        </nav>
+      </header>
+
+    <main>
+      <div class="container">
+      <div class="text-left">
+        <h1 class="fw-normal" style="font-size: 1.6em;margin-top: 1em;">Φίλτρα</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <select class="form-select" id="NomosSelect">
+            <option selected="">Επιλογή Νομού...</option>
+            <option value="1">Αιτωλίας & Ακαρνανίας</option>
+            <option value="2">Αργολίδος</option>
+            <option value="3">Αρκαδίας</option>
+            <option value="4">Άρτης</option>
+            <option value="5">Αττικής</option>
+            <option value="6">Αχαίας</option>
+            <option value="7">Βοιωτίας</option>
+            <option value="8">Γρεβενών</option>
+            <option value="9">Δράμας</option>
+            <option value="10">Δωδεκανήσου</option>
+            <option value="11">Έβρου</option>
+            <option value="12">Ευβοίας</option>
+            <option value="13">Ευρυτανίας</option>
+            <option value="14">Ζακύνθου</option>
+            <option value="15">Ηλείας</option>
+            <option value="16">Ημαθίας</option>
+            <option value="17">Ηρακλείου</option>
+            <option value="18">Θεσπρωτίας</option>
+            <option value="19">Θεσσαλoνίκης</option>
+            <option value="20">Ιωαννίνων</option>
+            <option value="21">Καβάλας</option>
+            <option value="22">Καρδίτσης</option>
+            <option value="23">Καστοριάς</option>
+            <option value="24">Κερκύρας</option>
+            <option value="25">Κεφαλληνίας</option>
+            <option value="26">Κιλκίς</option>
+            <option value="27">Κοζάνης</option>
+            <option value="28">Κορινθίας</option>
+            <option value="29">Κυκλάδων</option>
+            <option value="30">Λακωνίας</option>
+            <option value="31">Λαρίσης</option>
+            <option value="32">Λασιθίου</option>
+            <option value="33">Λέσβου</option>
+            <option value="34">Λευκάδος</option>
+            <option value="35">Μαγνησίας</option>
+            <option value="36">Μεσσηνίας</option>
+            <option value="37">Ξάνθης</option>
+            <option value="38">Πέλλης</option>
+            <option value="39">Πιερίας</option>
+            <option value="40">Πρεβέζης</option>
+            <option value="41">Ρεθύμνης</option>
+            <option value="42">Ροδόπης</option>
+            <option value="43">Σάμου</option>
+            <option value="44">Σερρών</option>
+            <option value="45">Τρικάλων</option>
+            <option value="46">Φθιώτιδος</option>
+            <option value="47">Φλωρίνης</option>
+            <option value="48">Φωκίδος</option>
+            <option value="49">Χαλκιδικής</option>
+            <option value="50">Χανίων</option>
+            <option value="51">Χίου</option>
+          </select>
+        </div>
+
+        <div class="col-4">
+          <select class="form-select" id="FuelSelect">
+            <option selected="">Επιλογή Καυσίμου...</option>
+            <option value="1">Αμόλυβδη 95</option>
+            <option value="2">Πετρέλαιο Κίνησης</option>
+            <option value="3">Πετρέλαιο Θέρμασης</option>
+          </select>
+        </div>
+
+        <div class="col-4">
+          <button type="submit" class="btn btn-primary account">Αναζήτηση</button>
+        </div>
+      </div>
+
+      <div class="text-left">
+        <h1 class="fw-normal" style="font-size: 1.6em;margin-top: 1em;">Αποτελέσματα</h1>
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">ΑΑ</th>
+            <th scope="col">Επωνυμία</th>
+            <th scope="col">Διεύθυνση</th>
+            <th scope="col">Τύπος Καυσίμου</th>
+            <th scope="col">Τιμή</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Ανδρέας Σημαντήρας ΕΕ</td>
+            <td><a
+                href="https://www.google.com/maps/place/%CE%A0%CE%B1%CF%80%CE%B1%CF%80%CE%BF%CF%83%CF%84%CF%8C%CE%BB%CE%BF%CF%85+65,+%CE%9B%CE%B1%CE%BC%CE%AF%CE%B1"
+                target="_blank">Παπαποστόλου 65, Λαμία</a></td>
+            <td>Αμόλυβδη 95</td>
+            <td>1.889 € /Λίτρο</td>
+          </tr>
+
+          <tr>
+            <th scope="row">2</th>
+            <td>Καλογήρου Μαρία</td>
+            <td><a
+                href="https://www.google.com/maps/place/ΛΑΡΙΣΗΣ & ΣΑΝΑΤΟΡΙΟΥ,ΛΑΜΙΑ"
+                target="_blank">Λαρίσης & Σανατορίου, Λαμία</a></td>
+            <td>Αμόλυβδη 95</td>
+            <td>1.738 € /Λίτρο</td>
+          </tr>
+
+          <tr>
+            <th scope="row">3</th>
+            <td>Κρέτσης Μιχάλης και ΣΙΑ ΕΕ</td>
+            <td><a
+                href="https://www.google.com/maps/place/Φραντζή και Αινιάνος, Λαμία"
+                target="_blank">Φραντζή και Αινιάνος, Λαμία</a></td>
+            <td>Αμόλυβδη 95</td>
+            <td>1.909 € /Λίτρο</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </div>
+    
+    </main>
+
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" style="text-align:center">
+
+      <a href="Files/TermsOfUse.pdf" target="_blank">Όροι χρήσης</a> - <a href="Files/PrivacyPolicy.pdf" target="_blank">Πολιτική
+        Απορρήτου</a>
+
+    </footer>
+  </div>
+
+</body>
+
+</html>
